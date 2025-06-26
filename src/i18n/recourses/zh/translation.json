@@ -1,0 +1,31 @@
+{
+  "hello": "你好",
+  "Dark": "暗色",
+  "Light": "亮色",
+  "Single": "单视图",
+  "Graph": "图表视图",
+  "Compare": "对比视图",
+  "NoDiff": "无差异",
+  "UserCheck": {
+    "ThankYou": "感谢使用 EasyJSON！",
+    "Trail": "您有 {{days}} 天试用期。",
+    "Buy": "购买",
+    "Activate": "激活",
+    "Email": "邮箱",
+    "ActivationCode": "激活码",
+    "EmailPlaceholder": "请输入您的购买邮箱",
+    "ActivationCodePlaceholder": "请输入您的激活码",
+    "ActivationHint": "一个激活码可以激活五台设备",
+    "InvalidEmail": "无效的邮箱地址",
+    "InvalidActivationCode": "无效的激活码",
+    "ActivationSuccess": "激活成功",
+    "InvalidLicense": "当前许可证似乎无效，请重试"
+  },
+  "user": {
+    "active": "激活",
+    "settings": "设置",
+    "settings.autoPaste": "自动粘贴",
+    "settings.globalShortcut": "全局快捷键",
+    "settings.globalShortcut.openAndPaste": "打开并粘贴"
+  }
+}

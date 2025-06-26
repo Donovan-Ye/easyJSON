@@ -1,0 +1,31 @@
+{
+  "hello": "Hello",
+  "Dark": "Dark",
+  "Light": "Light",
+  "Single": "Single view",
+  "Graph": "Graph view",
+  "Compare": "Compare view",
+  "NoDiff": "No diff",
+  "UserCheck": {
+    "ThankYou": "Thank you for using EasyJSON!",
+    "Trail": "You have {{days}} days left in your trial",
+    "Buy": "Buy",
+    "Activate": "Activate",
+    "Email": "Email",
+    "ActivationCode": "Activation Code",
+    "EmailPlaceholder": "Please enter your purchase email",
+    "ActivationCodePlaceholder": "Please enter your activation code",
+    "ActivationHint": "One activation code can activate five devices",
+    "InvalidEmail": "Invalid email address",
+    "InvalidActivationCode": "Invalid activation code",
+    "ActivationSuccess": "Activation successful",
+    "InvalidLicense": "It seems that current license is invalid, please try again"
+  },
+  "user": {
+    "active": "Active",
+    "settings": "Settings",
+    "settings.autoPaste": "Auto Paste",
+    "settings.globalShortcut": "Global Shortcut",
+    "settings.globalShortcut.openAndPaste": "Open and Paste"
+  }
+}

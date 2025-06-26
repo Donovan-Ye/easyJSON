@@ -1,0 +1,342 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+.logo.vite:hover {
+  filter: drop-shadow(0 0 2em #747bff);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafb);
+}
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color: #0f0f0f;
+  background-color: #f6f6f6;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+
+  --max-key-length: 300px;
+  --max-value-length: 500px;
+  --search-hl-color: #f9c9b2;
+  --search-width: 300px;
+  --search-height: 300px;
+
+  --bg-key: #e0e0e04d;
+  --hl-key: #a31515;
+  --hl-string: #0451a5;
+  --hl-number: #098658;
+  --hl-null: #d1004d;
+  --hl-empty: #0000004d;
+  --hl-index: #0000004d;
+  --hl-array: #319331;
+  --hl-object: #0431fa;
+
+  --parse-error: #cb2a2f;
+  --parse-error-foreground: #ff9b9533;
+  --diff-blank-hunk: #cdd7e033;
+  --diff-margin-red: #ffd7d5;
+  --diff-margin-green: #ccffd8;
+  --diff-fg-red: #ff818266;
+  --diff-bg-red: #ff9b9533;
+  --diff-fg-green: #2ddf5966;
+  --diff-bg-green: #82ffa433;
+
+  --graph-node-bg: rgb(255 255 255);
+  --graph-font-size: 12px;
+  /* same value as --monaco-monospace-font */
+  --graph-font-family: "SF Mono", Monaco, Menlo, Consolas, "Ubuntu Mono",
+    "Liberation Mono", "DejaVu Sans Mono", "Courier New", monospace;
+
+  --graph-node-popover-bg: rgb(255 255 255);
+  --graph-node-popover-color: rgb(0 0 0);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: #f6f6f6;
+    background-color: #2f2f2f;
+  }
+
+  a:hover {
+    color: #24c8db;
+  }
+}
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+
+  --graph-node-bg: rgb(32 32 35 / 0.6);
+  --hl-string: #ce9178;
+  --hl-key: #9cdcfe;
+  --hl-null: #d16969;
+  --hl-empty: #ffd700;
+  --hl-array: #ffd700;
+  --hl-object: #da70d6;
+  --hl-index: #f8f8f8;
+
+  --search-hl-color: #304e75;
+}
+
+@theme {
+  --color-hl-key: var(--hl-key);
+  --color-hl-string: var(--hl-string);
+  --color-hl-number: var(--hl-number);
+  --color-hl-array: var(--hl-array);
+  --color-hl-object: var(--hl-object);
+  --color-hl-boolean: var(--hl-null);
+  --color-hl-null: var(--hl-null);
+  --color-hl-empty: var(--hl-empty);
+  --color-hl-index: var(--hl-index);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+/* fix monaco 不能根据父容器改变大小的 bug：https://stackoverflow.com/questions/47017753/monaco-editor-dynamically-resizable */
+.monaco-editor {
+  position: absolute !important;
+}
+
+.blank-hunk {
+  background-color: var(--diff-blank-hunk);
+}
+
+.margin-del {
+  background-color: var(--diff-margin-red);
+}
+
+.margin-ins {
+  background-color: var(--diff-margin-green);
+}
+
+.line-del {
+  background-color: var(--diff-bg-red);
+}
+
+.line-ins {
+  background-color: var(--diff-bg-green);
+}
+
+.inline-del {
+  background-color: var(--diff-fg-red);
+}
+
+.inline-ins {
+  background-color: var(--diff-fg-green);
+}
+
+.parse-error {
+  display: inline-block;
+  cursor: pointer;
+  overflow-x: auto;
+  white-space: nowrap;
+  color: var(--parse-error-red);
+}
+
+.parse-error-ctx {
+  background-color: var(--diff-fg-red);
+}
+
+.react-flow {
+  .react-flow__controls {
+    margin-bottom: 25px;
+  }
+
+  .react-flow__handle-left {
+    width: 0px;
+    height: 0px;
+  }
+
+  .react-flow__handle-right {
+    width: 10px;
+    height: 10px;
+    border-radius: 9999px;
+    cursor: pointer !important;
+  }
+}
+
+::highlight(search-highlight) {
+  background-color: var(--search-hl-color);
+}
+
+/* used for firefox */
+.search-highlight {
+  background-color: var(--search-hl-color);
+}
+
+.react-flow__node {
+  border-radius: 8px;
+}
+
+.graph-node {
+  min-width: fit-content;
+  border-width: 1px;
+  border-radius: 8px;
+  background-color: var(--graph-node-bg);
+  font-size: var(--graph-font-size);
+  font-family: var(--graph-font-family);
+}
+
+.graph-array-edge {
+  position: absolute;
+  background: transparent;
+  color: var(--hl-empty);
+  font-size: var(--graph-font-size);
+  font-family: var(--graph-font-family);
+}
+
+.graph-kv {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.graph-k {
+  margin-right: 20px;
+  max-width: var(--max-key-length);
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}
+
+.graph-v {
+  max-width: var(--max-value-length);
+  margin-left: auto;
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}
+
+.popover-container {
+  display: flex;
+  height: auto;
+  max-height: 250px;
+  overflow: hidden;
+
+  .popover-item {
+    width: max-content;
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--graph-node-popover-bg);
+    color: var(--graph-node-popover-color);
+    border: 1px solid var(--border);
+    word-wrap: break-word;
+    font-size: 18px;
+    padding: 10px;
+  }
+}
