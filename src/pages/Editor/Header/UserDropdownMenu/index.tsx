@@ -13,14 +13,8 @@ import SiJsonAlt2Fill from "~icons/si/json-alt-2-fill";
 
 const UserDropdownMenu: React.FC = () => {
   const { t } = useTranslation();
-  const {
-    user,
-    setUserCheckOpen,
-    settings,
-    setSettings,
-    updateGlobalShortcut,
-    resetGlobalShortcut,
-  } = useUserStore();
+  const { settings, setSettings, updateGlobalShortcut, resetGlobalShortcut } =
+    useUserStore();
 
   return (
     <DropdownMenu>
@@ -28,14 +22,6 @@ const UserDropdownMenu: React.FC = () => {
         <SiJsonAlt2Fill className="opacity-80" />
       </DropdownMenuTrigger>
       <DropdownMenuContent>
-        {(!user || !user.license) && (
-          <>
-            <DropdownMenuItem onClick={() => setUserCheckOpen(true)}>
-              {t("user.active")}
-            </DropdownMenuItem>
-            <DropdownMenuSeparator />
-          </>
-        )}
         <DropdownMenuLabel>{t("user.settings")}</DropdownMenuLabel>
         <DropdownMenuItem
           onClick={(e) => {
