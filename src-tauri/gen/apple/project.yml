@@ -24,20 +24,20 @@ targetTemplates:
     settings:
       groups: [app]
 targets:
-  easyjson2_iOS:
+  easyjson_iOS:
     type: application
     platform: iOS
     sources:
       - path: Sources
       - path: Assets.xcassets
       - path: Externals
-      - path: easyjson2_iOS
+      - path: easyjson_iOS
       - path: assets
         buildPhase: resources
         type: folder
       - path: LaunchScreen.storyboard
     info:
-      path: easyjson2_iOS/Info.plist
+      path: easyjson_iOS/Info.plist
       properties:
         LSRequiresIPhoneOS: true
         UILaunchStoryboardName: LaunchScreen
@@ -54,7 +54,7 @@ targets:
         CFBundleShortVersionString: 0.1.0
         CFBundleVersion: 0.1.0
     entitlements:
-      path: easyjson2_iOS/easyjson2_iOS.entitlements
+      path: easyjson_iOS/easyjson_iOS.entitlements
     scheme:
       environmentVariables:
         RUST_BACKTRACE: full

@@ -1,13 +1,13 @@
 # Uncomment the next line to define a global platform for your project
 
-target 'easyjson2_iOS' do
+target 'easyjson_iOS' do
 platform :ios, '13.0'
-  # Pods for easyjson2_iOS
+  # Pods for easyjson_iOS
 end
 
-target 'easyjson2_macOS' do
+target 'easyjson_macOS' do
 platform :osx, '11.0'
-  # Pods for easyjson2_macOS
+  # Pods for easyjson_macOS
 end
 
 # Delete the deployment target for iOS and macOS, causing it to be inherited from the Podfile

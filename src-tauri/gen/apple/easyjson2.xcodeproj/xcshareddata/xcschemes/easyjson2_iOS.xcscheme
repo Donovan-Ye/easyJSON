@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4A12EB6F0608B5F7BBB7836F"
                BuildableName = "easyjson.app"
-               BlueprintName = "easyjson2_iOS"
+               BlueprintName = "easyjson_iOS"
                ReferencedContainer = "container:easyjson.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,7 +32,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4A12EB6F0608B5F7BBB7836F"
             BuildableName = "easyjson.app"
-            BlueprintName = "easyjson2_iOS"
+            BlueprintName = "easyjson_iOS"
             ReferencedContainer = "container:easyjson.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -67,7 +67,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4A12EB6F0608B5F7BBB7836F"
             BuildableName = "easyjson.app"
-            BlueprintName = "easyjson2_iOS"
+            BlueprintName = "easyjson_iOS"
             ReferencedContainer = "container:easyjson.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -96,7 +96,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4A12EB6F0608B5F7BBB7836F"
             BuildableName = "easyjson.app"
-            BlueprintName = "easyjson2_iOS"
+            BlueprintName = "easyjson_iOS"
             ReferencedContainer = "container:easyjson.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

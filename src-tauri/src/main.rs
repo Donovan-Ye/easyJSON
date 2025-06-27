@@ -2,5 +2,5 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
 fn main() {
-    easyjson2_lib::run()
+    easyjson_lib::run()
 }
