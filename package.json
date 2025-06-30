@@ -1,8 +1,9 @@
 {
   "name": "easyjson",
-  "private": true,
   "version": "0.6.0",
   "type": "module",
+  "description": "JSON visualization desktop tool.",
+  "author": "DonovanYe<xxiaozhiyzj@gmail.com>",
   "scripts": {
     "dev": "vite",
     "dev:prod": "vite --mode production",
