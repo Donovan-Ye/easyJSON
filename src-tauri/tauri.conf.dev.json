@@ -24,7 +24,7 @@
   "bundle": {
     "macOS": {
       "files": {
-        "embedded.provisionprofile": "./build/easyJSON_prod.provisionprofile"
+        "embedded.provisionprofile": "./build/easyJSON_dev.provisionprofile"
       },
       "hardenedRuntime": false,
       "entitlements": "./Entitlements.plist",

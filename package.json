@@ -1,15 +1,17 @@
 {
   "name": "easyjson",
   "private": true,
-  "version": "0.5.0",
+  "version": "0.6.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "dev:prod": "vite --mode production",
     "build": "vite build",
-    "build:mac": "tauri build --bundles app --target universal-apple-darwin",
-    "build:win": "tauri build --runner cargo-xwin --target x86_64-pc-windows-msvc",
     "sign:mac": "sh mac-sign.sh",
+    "sign:mac-dev": "sh mac-sign-dev.sh",
+    "build:mac-dev": "tauri build --bundles app --target universal-apple-darwin --config ./src-tauri/tauri.conf.dev.json",
+    "build:mac": "tauri build --bundles app --target universal-apple-darwin && pnpm run sign:mac",
+    "build:win": "tauri build --runner cargo-xwin --target x86_64-pc-windows-msvc",
     "preview": "vite preview",
     "tauri": "tauri"
   },

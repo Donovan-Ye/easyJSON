@@ -8,5 +8,7 @@
     <string>$TEAMID.com.easy.json</string>
     <key>com.apple.developer.team-identifier</key>
     <string>$TEAMID</string>
+    <key>com.apple.security.network.client</key>
+    <true/>
 </dict>
 </plist>
