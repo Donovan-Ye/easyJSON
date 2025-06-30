@@ -28,8 +28,8 @@ To keep things focused and efficient, I've implemented the core features of json
 
 # Download
 
-| Platform | Download                                                                                                                                                                                                          |
-| -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Macos    | <a href="https://apps.apple.com/app/easyjson/id6768292029" target="_blank"><img src="https://github.com/user-attachments/assets/0d47f902-7fa3-494e-ad28-9ab11af5e6d4" alt="App Store" height="55"/></a>           |
-| Windows  | <a href="https://github.com/DonovanYe/easyJSON/releases/latest" target="_blank"><img src="https://github.com/user-attachments/assets/cf61e197-d756-4606-a8ad-fb591f79fdfc" alt="github release" height="55"/></a> |
-| Linux    | <a href="https://github.com/DonovanYe/easyJSON/releases/latest" target="_blank"><img src="https://github.com/user-attachments/assets/cf61e197-d756-4606-a8ad-fb591f79fdfc" alt="github release" height="55"/></a> |
+| Platform | Download                                                                                                                                                                                                    |
+| -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Macos    | <a href="https://apps.apple.com/us/app/easy-json/id6746864678" target="_blank"><img src="https://github.com/user-attachments/assets/0d47f902-7fa3-494e-ad28-9ab11af5e6d4" alt="App Store" height="55"/></a> |
+| Windows  | <a href="https://github.com/Donovan-Ye/easyJSON/releases" target="_blank"><img src="https://github.com/user-attachments/assets/cf61e197-d756-4606-a8ad-fb591f79fdfc" alt="github release" height="55"/></a> |
+| Linux    | <a href="https://github.com/Donovan-Ye/easyJSON/releases" target="_blank"><img src="https://github.com/user-attachments/assets/cf61e197-d756-4606-a8ad-fb591f79fdfc" alt="github release" height="55"/></a> |
