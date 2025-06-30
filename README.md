@@ -1,20 +1,27 @@
-# easyJSON
+<p align="center">
+  <img src="./src-tauri/icons/icon.png" alt="easyJSON" width="200" height="200">
+</p>
+<h1 align="center">
+easyJSON
+</h1>
+<p align="center">
+A desktop tool for visualizing JSON.
 
-JSON visualization desktop tool.
+easyJSON is a encapsulated desktop version of <a href="https://github.com/loggerhead/json4u?tab=readme-ov-file">json4u</a>. I created this app because I couldn't find a beautiful and easy-to-use JSON visualization tool for Mac.
 
-This is a encapsulated desktop version of [json4u](https://github.com/loggerhead/json4u?tab=readme-ov-file). I created this app because I didnt find any beautiful and easy to use json visualization tool on Mac.
+</p>
 
 # Features
 
-Due to the limitation of time and my use case, I only implemented the basic features of json4u and added some features that I think are useful.
+To keep things focused and efficient, I've implemented the core features of json4u along with a few enhancements that I find particularly useful.
 
-## Basic Features
+## Core Features
 
 - [x] JSON visualization
 - [x] JSON comparison
 - [x] JSON formatting
 
-## Added Features
+## Additional Features
 
-- [x] Auto paste json from clipboard
-- [x] Global shortcut to open and paste json from clipboard
+- [x] Automatically paste JSON from the clipboard
+- [x] Global shortcut to open the app and paste JSON from the clipboard
