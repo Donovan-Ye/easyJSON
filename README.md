@@ -11,13 +11,16 @@ easyJSON is a encapsulated desktop version of <a href="https://github.com/logger
 
 </p>
 
-# Screenshots
-
-<p align="center">
-  <img src="./public/screenshot1.png" alt="easyJSON1" width="32%" style="display: inline-block; margin-right: 1%;">
-  <img src="./public/screenshot2.png" alt="easyJSON2" width="32%" style="display: inline-block; margin-right: 1%;">
-  <img src="./public/screenshot3.png" alt="easyJSON3" width="32%" style="display: inline-block;">
-</p>
+<table align="center">
+  <tr>
+    <td><img src="./public/screenshot1.jpg" alt="easyJSON1" width="100%"></td>
+    <td><img src="./public/screenshot2.jpg" alt="easyJSON2" width="100%"></td>
+  </tr>
+  <tr>
+    <td><img src="./public/screenshot3.jpg" alt="easyJSON3" width="100%"></td>
+    <td><img src="./public/screenshot4.jpg" alt="easyJSON4" width="100%"></td>
+  </tr>
+</table>
 
 # Features
 
