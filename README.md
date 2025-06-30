@@ -11,6 +11,14 @@ easyJSON is a encapsulated desktop version of <a href="https://github.com/logger
 
 </p>
 
+# Screenshots
+
+<p align="center">
+  <img src="./public/screenshot1.png" alt="easyJSON" width="33%">
+  <img src="./public/screenshot2.png" alt="easyJSON" width="33%">
+  <img src="./public/screenshot3.png" alt="easyJSON" width="33%">
+</p>
+
 # Features
 
 To keep things focused and efficient, I've implemented the core features of json4u along with a few enhancements that I find particularly useful.
