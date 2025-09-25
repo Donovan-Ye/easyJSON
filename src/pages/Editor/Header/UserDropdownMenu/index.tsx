@@ -7,7 +7,7 @@ import {
   DropdownMenuShortcut,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import useUserStore from "@/stores/userStore";
+import useUserStore, { GlobalShortcutKey } from "@/stores/userStore";
 import { useTranslation } from "react-i18next";
 import SiJsonAlt2Fill from "~icons/si/json-alt-2-fill";
 
@@ -56,7 +56,7 @@ const UserDropdownMenu: React.FC = () => {
             e.preventDefault();
             e.stopPropagation();
             updateGlobalShortcut(
-              "openAndPaste",
+              GlobalShortcutKey.OpenAndPaste,
               !settings.globalShortcut.openAndPaste.enabled
             );
           }}

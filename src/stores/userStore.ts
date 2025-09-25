@@ -19,8 +19,12 @@ const validateUser = (user: unknown): user is User => {
   );
 };
 
+export enum GlobalShortcutKey {
+  OpenAndPaste = "openAndPaste",
+}
+
 const defaultGlobalShortcut = {
-  openAndPaste: {
+  [GlobalShortcutKey.OpenAndPaste]: {
     enabled: true,
     shortcut: "CommandOrControl+Shift+D",
   },
@@ -29,7 +33,7 @@ const defaultGlobalShortcut = {
 interface Settings {
   autoPaste: boolean;
   globalShortcut: {
-    openAndPaste: {
+    [GlobalShortcutKey.OpenAndPaste]: {
       enabled: boolean;
       shortcut: string;
     };

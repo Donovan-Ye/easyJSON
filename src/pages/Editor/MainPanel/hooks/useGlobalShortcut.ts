@@ -1,8 +1,8 @@
 import { useEditor } from "@/stores/editorStore";
-import useUserStore from "@/stores/userStore";
+import useUserStore, { GlobalShortcutKey } from "@/stores/userStore";
 import { useEffect } from "react";
 import { useShallow } from "zustand/shallow";
-import { register, unregisterAll } from "@tauri-apps/plugin-global-shortcut";
+import { register, unregister } from "@tauri-apps/plugin-global-shortcut";
 import { readText } from "@tauri-apps/plugin-clipboard-manager";
 import { getCurrentWindow } from "@tauri-apps/api/window";
 
@@ -16,9 +16,8 @@ const useGlobalShortcut = () => {
 
   useEffect(() => {
     if (main) {
-      console.log("main", main);
-      Object.entries(globalShortcut).forEach(([_, value]) => {
-        if (value.enabled && value.shortcut) {
+      Object.entries(globalShortcut).forEach(([key, value]) => {
+        if (key === GlobalShortcutKey.OpenAndPaste && value.enabled && value.shortcut) {
           register(value.shortcut, async () => {
             const text = await readText();
             const window = getCurrentWindow();
@@ -31,7 +30,7 @@ const useGlobalShortcut = () => {
     }
 
     return () => {
-      unregisterAll();
+      unregister(Object.values(globalShortcut).map((value) => value.shortcut));
     };
   }, [JSON.stringify(globalShortcut), main]);
 };
