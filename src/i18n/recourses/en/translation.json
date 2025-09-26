@@ -25,6 +25,7 @@
     "active": "Active",
     "settings": "Settings",
     "settings.autoPaste": "Auto Paste",
+    "settings.replaceSingleQuote": "Replace Single Quote",
     "settings.globalShortcut": "Global Shortcut",
     "settings.globalShortcut.openAndPaste": "Open and Paste"
   }

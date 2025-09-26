@@ -19,7 +19,7 @@ const useGlobalShortcut = () => {
       Object.entries(globalShortcut).forEach(([key, value]) => {
         if (key === GlobalShortcutKey.OpenAndPaste && value.enabled && value.shortcut) {
           register(value.shortcut, async () => {
-            const text = await readText();
+            let text = await readText();
             const window = getCurrentWindow();
             window.show();
             window.setFocus();

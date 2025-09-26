@@ -5,6 +5,7 @@ import { getStatusState } from "@/stores/statusStore";
 import { getTreeState } from "@/stores/treeStore";
 import { debounce, type DebouncedFunc } from "lodash-es";
 import { editorApi, IScrollEvent } from "./types";
+import useUserStore from "@/stores/userStore";
 
 export type Kind = "main" | "secondary";
 type ScrollEvent = IScrollEvent & {
@@ -138,6 +139,12 @@ export class EditorWrapper {
       ...extraParseOptions,
       kind: this.kind,
     };
+
+    if (useUserStore.getState().settings.replaceSingleQuote) {
+      // Replace single quotes that are used as property name delimiters
+      // This handles nested objects and arrays properly
+      text = this.replaceSingleQuotesInPropertyNames(text);
+    }
 
     reportTextSize(text.length);
     const parsedTree = await this.worker().parseAndFormat(text, options);
@@ -290,6 +297,27 @@ export class EditorWrapper {
 
   scrollable() {
     return this.scrolling && getStatusState().enableSyncScroll;
+  }
+
+  /**
+   * Replace single quotes in property names and string values with double quotes
+   * This method handles nested objects and arrays properly
+   */
+  private replaceSingleQuotesInPropertyNames(text: string): string {
+    // Step 1: Replace single quotes in property names with double quotes
+    let result = text.replace(/'([^']+)'\s*:/g, '"$1":');
+
+    // Step 2: Replace single quotes in all string values with double quotes
+    // Match single-quoted string values after a colon
+    result = result.replace(/:\s*'([^']*)'/g, ': "$1"');
+
+    // Step 3: Replace single-quoted string values in arrays
+    // Match single-quoted strings in arrays
+    result = result.replace(/\[\s*'([^']*)'/g, '["$1"');
+    result = result.replace(/,\s*'([^']*)'/g, ', "$1"');
+    result = result.replace(/,\s*'([^']*)'\s*\]/g, ', "$1"]');
+
+    return result;
   }
 }
 

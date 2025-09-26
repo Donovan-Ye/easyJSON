@@ -10,6 +10,7 @@ import {
 import useUserStore, { GlobalShortcutKey } from "@/stores/userStore";
 import { useTranslation } from "react-i18next";
 import SiJsonAlt2Fill from "~icons/si/json-alt-2-fill";
+import SwitchLabel from "./SwitchLabel";
 
 const UserDropdownMenu: React.FC = () => {
   const { t } = useTranslation();
@@ -35,7 +36,23 @@ const UserDropdownMenu: React.FC = () => {
         >
           {t("user.settings.autoPaste")}
           <DropdownMenuShortcut>
-            {settings.autoPaste ? "ON" : "OFF"}
+            <SwitchLabel checked={settings.autoPaste} />
+          </DropdownMenuShortcut>
+        </DropdownMenuItem>
+
+        <DropdownMenuItem
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            setSettings({
+              ...settings,
+              replaceSingleQuote: !settings.replaceSingleQuote,
+            });
+          }}
+        >
+          {t("user.settings.replaceSingleQuote")}
+          <DropdownMenuShortcut>
+            <SwitchLabel checked={settings.replaceSingleQuote} />
           </DropdownMenuShortcut>
         </DropdownMenuItem>
 
@@ -66,7 +83,7 @@ const UserDropdownMenu: React.FC = () => {
             {settings.globalShortcut.openAndPaste.shortcut}
           </DropdownMenuShortcut>
           <DropdownMenuShortcut>
-            {settings.globalShortcut.openAndPaste.enabled ? "ON" : "OFF"}
+            <SwitchLabel checked={settings.globalShortcut.openAndPaste.enabled} />
           </DropdownMenuShortcut>
         </DropdownMenuItem>
       </DropdownMenuContent>
