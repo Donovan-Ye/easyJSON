@@ -25,7 +25,7 @@
     "active": "激活",
     "settings": "设置",
     "settings.autoPaste": "自动粘贴",
-    "settings.replaceSingleQuote": "替换单引号",
+    "settings.pythonDictToJSON": "Python Dict 转 JSON",
     "settings.globalShortcut": "全局快捷键",
     "settings.globalShortcut.openAndPaste": "打开并粘贴"
   }

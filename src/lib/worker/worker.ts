@@ -5,6 +5,7 @@ import { compareText, compareTree } from "./command/compare";
 import { csv2json, json2csv } from "./command/csv";
 import { escape, unescape } from "./command/escape";
 import { parseAndFormat } from "./command/parse";
+import { pythonDictToJSON } from "./command/pythonDictToJSON";
 import {
   clearGraphNodeSelected,
   computeGraphRevealPosition,
@@ -37,6 +38,7 @@ const worker = {
   triggerGraphFoldSiblings,
   computeGraphRevealPosition,
   searchInView,
+  pythonDictToJSON
 };
 
 export type MyWorker = typeof worker;

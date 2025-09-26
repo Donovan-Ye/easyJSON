@@ -46,13 +46,13 @@ const UserDropdownMenu: React.FC = () => {
             e.stopPropagation();
             setSettings({
               ...settings,
-              replaceSingleQuote: !settings.replaceSingleQuote,
+              pythonDictToJSON: !settings.pythonDictToJSON,
             });
           }}
         >
-          {t("user.settings.replaceSingleQuote")}
+          {t("user.settings.pythonDictToJSON")}
           <DropdownMenuShortcut>
-            <SwitchLabel checked={settings.replaceSingleQuote} />
+            <SwitchLabel checked={settings.pythonDictToJSON} />
           </DropdownMenuShortcut>
         </DropdownMenuItem>
 

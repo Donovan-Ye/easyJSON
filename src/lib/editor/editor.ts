@@ -140,10 +140,8 @@ export class EditorWrapper {
       kind: this.kind,
     };
 
-    if (useUserStore.getState().settings.replaceSingleQuote) {
-      // Replace single quotes that are used as property name delimiters
-      // This handles nested objects and arrays properly
-      text = this.replaceSingleQuotesInPropertyNames(text);
+    if (useUserStore.getState().settings.pythonDictToJSON) {
+      text = await this.worker().pythonDictToJSON(text);
     }
 
     reportTextSize(text.length);

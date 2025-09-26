@@ -1,6 +1,7 @@
 import { type ParseOptions } from "@/lib/parser";
 import { get, set, del, type UseStore, createStore } from "idb-keyval";
 import Cookies from "js-cookie";
+import { StateStorage } from "zustand/middleware";
 
 export const keyName = "config";
 
@@ -103,3 +104,25 @@ export async function safeDel(key: string) {
     }
   }
 }
+
+const storage: StateStorage = {
+  getItem: safeGet,
+  setItem: safeSet,
+  removeItem: safeDel,
+};
+
+/**
+ * Gets the config from the store.
+ * @returns The config, or the default config if it does not exist.
+ */
+async function getConfig() {
+  try {
+    const stateStr = await safeGet(keyName);
+    return JSON.parse(stateStr).state as Config;
+  } catch (e) {
+    console.log("fallback to use default config.");
+    return defaultConfig;
+  }
+}
+
+export { storage, getConfig };

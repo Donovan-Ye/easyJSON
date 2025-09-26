@@ -124,6 +124,14 @@ export const useEditorStore = create<EditorState>()(
           },
         },
         {
+          id: "pythonDictToJSON",
+          run: async () => {
+            const { main } = get();
+            const { parse } = await main!.parseAndSet(await window.worker.pythonDictToJSON(main!.text()));
+            return parse;
+          },
+        },
+        {
           id: "show_jq",
           run: () => getStatusState().setCommandMode("jq"),
         },

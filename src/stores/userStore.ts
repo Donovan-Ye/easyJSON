@@ -32,7 +32,7 @@ const defaultGlobalShortcut = {
 
 interface Settings {
   autoPaste: boolean;
-  replaceSingleQuote: boolean;
+  pythonDictToJSON: boolean;
   globalShortcut: {
     [GlobalShortcutKey.OpenAndPaste]: {
       enabled: boolean;
@@ -64,7 +64,7 @@ const useUserStore = create<UserStore>((set, get) => {
     user: null,
     settings: {
       autoPaste: true,
-      replaceSingleQuote: false,
+      pythonDictToJSON: false,
       globalShortcut: defaultGlobalShortcut,
     },
     userCheckOpen: false,
