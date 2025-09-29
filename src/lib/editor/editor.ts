@@ -155,7 +155,11 @@ export class EditorWrapper {
       const prevText = this.tree.text;
       const text = this.text();
 
-      if (text !== prevText) {
+      // 标准化换行符，避免 \r\n 和 \n 的比较问题
+      const normalizedText = text.replace(/\r\n/g, '\n');
+      const normalizedPrevText = prevText.replace(/\r\n/g, '\n');
+
+      if (normalizedText !== normalizedPrevText) {
         console.log("-".repeat(100));
         console.l("onChange:", ev.versionId);
         this.delayParseAndSet.cancel();
