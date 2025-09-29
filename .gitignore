@@ -23,10 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 
-# script to sign the app with sensitive info 
-mac-sign.sh
-mac-sign-dev.sh
-
 # sensitive file
 /src-tauri/Entitlements.plist
 /src-tauri/build
