@@ -1,6 +1,6 @@
 {
   "name": "easyjson",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "type": "module",
   "description": "JSON visualization desktop tool.",
   "author": "DonovanYe<xxiaozhiyzj@gmail.com>",
@@ -8,6 +8,7 @@
     "dev": "vite",
     "dev:prod": "vite --mode production",
     "build": "vite build",
+    "update:version": "node update-version.js",
     "sign:mac": "sh mac-sign.sh",
     "sign:mac-dev": "sh mac-sign-dev.sh",
     "build:mac-dev": "tauri build --bundles app --target universal-apple-darwin --config ./src-tauri/tauri.conf.dev.json",
